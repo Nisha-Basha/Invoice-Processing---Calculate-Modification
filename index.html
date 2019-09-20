@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Table Calculation Modification</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <section id="productCal" class="my-5">
+            <div class="container">
+                <div class="table-responsive">
+                <table class="table table-bordered text-center tableProduct">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Customer Name</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Tax</th> 
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="tableRow1">
+                            <td>1</td>
+                            <td> <select class="custom-select CustomerName inputData">
+                                <option selected>Select</option>
+                                <option value="1">Ashwin</option>
+                                <option value="2">Prabu</option>
+                                <option value="3">Sachin</option>
+                              </select> </td>
+                            <td> <select class="custom-select productName inputData">
+                                    <option selected>Select</option>
+                                    <option value="1">Laptop</option>
+                                    <option value="2">computer</option>
+                                    <option value="3">Mobile</option>
+                                  </select> </td>
+                            <td> <input type="number" class="form-control productQty inputData" placeholder="Enter Qunatity"> </td>
+                            <td> <input type="number" class="form-control productPrice inputData" placeholder="Enter Price" > </td>
+                            <td>
+                                <!-- <div class="input-group"> -->
+                                    <select class="custom-select taxPercentage inputData">
+                                        <option selected>00.00</option>
+                                        <option>5</option>
+                                        <option>10</option>
+                                        <option>15</option>
+                                        <option>20</option>
+                                        <option>25</option>
+                                        <option>30</option>
+                                        <option>50</option>
+                                        <option>70</option>
+                                        <option>100</option>
+                                    </select>
+                                    <!-- <div class="input-group-append">
+                                        <span class="input-group-text">&#37;</span>
+                                    </div>
+                                </div> -->
+                            </td>
+                            <td><input type="number" placeholder='0.00' class="form-control totalAmt" readonly/>
+                            </td>
+                            <td><button class="btn btn-danger btn-sm deleteRow"><i class="fa fa-times"></i></button></td>
+                        </tr>
+                        <tr id="tableRow2"></tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-outline-secondary float-right addRow">Add Row</button>
+                        <!-- <button class="btn btn-outline-secondary float-right deleteRow">Delete Row</button> -->
+                    </div>
+                </div>
+                <div class="row float-right my-5">
+                    <div class="col-12">
+                        <table class="table table-bordered table-hover text-center tableTotal">
+                            <tbody>
+                                <tr>
+                                    <th>Sub Total</th>
+                                    <td><input type="number"placeholder='0.00' class="form-control" id="subTotal" readonly></td>
+                                </tr>
+                                <tr>
+                                    <th>Total Tax Amount</th>
+                                    <td class=""><input type="number"placeholder='0.00' class="form-control taxAmt" readonly></td>
+                                </tr>
+                                <tr>
+                                    <th>Grand Total</th>
+                                    <td><input type="number"placeholder='0.00' class="form-control grandTotal" readonly></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" 
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="js/app.js"></script>
+        
+    </body>
+</html>
